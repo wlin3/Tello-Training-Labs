@@ -53,6 +53,13 @@ def triangle():
         sendmsg('forward 100')
         sendmsg('ccw 120')
 
+def hexagonflip():
+    sendmsg('up 100')
+    for i in range(6):
+        sendmsg('forward 50')
+        sendmsg('ccw 60')
+    sendmsg('flip f')
+
 print("\n William Lin")
 print("Program Name: Tello Training Lab, Square Function ")
 print("Date: 3/3/20")
@@ -69,7 +76,7 @@ try:
         sendmsg('takeoff', 8)
 
         #square() #calling function square
-        triangle()
+        hexagonflip()
 
         sendmsg('land')
 
